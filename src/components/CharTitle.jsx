@@ -1,15 +1,17 @@
-import Card from 'react-bootstrap/Card';
-import Row from 'react-bootstrap/Row';
+import Card from "react-bootstrap/Card";
+import Row from "react-bootstrap/Row";
 
-function Title({name, keywords, exalted}){
-  return(
+function Title({ name, keywords, exalted }) {
+  return (
     <>
-      <Row style={{justifyContent: "center", alignItems: "center"}}>
-      <Card.Title><h1>{name}</h1></Card.Title>
+      <Row style={{ justifyContent: "center", alignItems: "center" }}>
+        <Card.Title>
+          <h1>{name}</h1>
+        </Card.Title>
       </Row>
-      <Row style={{justifyContent: "center", alignItems: "center"}}>
-        <Card.Subtitle style={{color: "#878786"}}>
-          {exalted && keywords + 'Exalted'}
+      <Row style={{ justifyContent: "center", alignItems: "center" }}>
+        <Card.Subtitle style={{ color: "#878786" }}>
+          {exalted && keywords + "Exalted"}
           {!exalted && keywords}
         </Card.Subtitle>
       </Row>
