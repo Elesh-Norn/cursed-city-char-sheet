@@ -1,0 +1,69 @@
+{
+  "name": "",
+  "keywords": "",
+  "normal_profile": {
+    "mouvement": "",
+    "agility": "",
+    "defense": "",
+    "vityality": "",
+    "attacks": [
+      {
+        "name": "",
+        "type": "",
+        "dice": "",
+        "dmg": ""
+      },
+      {
+        "name": "",
+        "type": "",
+        "dice": "",
+        "dmg": ""
+      }
+    ],
+    "aptitudes": [
+      {
+        "name": "",
+        "text": ""
+      },
+      {
+        "name": "",
+        "text": ""
+      }
+    ]
+  },
+  "exalted_profile": {
+    "mouvement": "",
+    "agility": "",
+    "defense": "",
+    "vityality": "",
+    "attacks": [
+      {
+        "name": "",
+        "type": "",
+        "dice": "",
+        "dmg": ""
+      },
+      {
+        "name": "",
+        "type": "",
+        "dice": "",
+        "dmg": ""
+      }
+    ],
+    "aptitudes": [
+      {
+        "name": "",
+        "text": ""
+      },
+      {
+        "name": "",
+        "text": ""
+      }
+    ]
+  },
+  "gloryRule": {
+    "name": "",
+    "text": ""
+  },
+  "picture_link": ""
+}

@@ -9,6 +9,7 @@ function Sentier({ name, text }) {
           backgroundColor: "#cac5d4",
           borderRadius: "15px",
           boxShadow: "0 0 3pt 2pt black",
+          marginTop: "10px",
         }}
       >
         <h4>SENTIER DE LA GLOIRE</h4>

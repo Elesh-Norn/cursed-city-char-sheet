@@ -4,7 +4,6 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import Picture from "./picture1.jpeg";
 import Button from "react-bootstrap/Button";
 import BoxDice from "./BoxDice.jsx";
 import { Attack, AttackBox } from "./Attack.jsx";
@@ -22,11 +21,11 @@ function CharCard({ character }) {
   }
 
   const normalAptitudes = character.normal.aptitudes.map((aptitude) => (
-    <Aptitude name={aptitude.name} text={aptitude.text} />
+    <Aptitude name={aptitude.name} text={aptitude.text} key={aptitude.name} />
   ));
 
   const exaltedAptitudes = character.exalted.aptitudes.map((aptitude) => (
-    <Aptitude name={aptitude.name} text={aptitude.text} />
+    <Aptitude name={aptitude.name} text={aptitude.text} key={aptitude.name} />
   ));
 
   const normalAttacks = character.normal.attacks.map((attack) => (
@@ -35,6 +34,7 @@ function CharCard({ character }) {
       type={attack.type}
       dice={attack.dice}
       dmg={attack.dmg}
+      key={attack.name}
     />
   ));
   const exaltedAttacks = character.exalted.attacks.map((attack) => (
@@ -43,18 +43,19 @@ function CharCard({ character }) {
       type={attack.type}
       dice={attack.dice}
       dmg={attack.dmg}
+      key={attack.name}
     />
   ));
 
   return (
     <Container>
-      <Card>
+      <div>
         <Row style={{ height: "400px" }}>
           <Col style={{ backgroundColor: Cardcolor(), maxWidth: "190px" }}>
             <img
               alt="Character portrait"
               style={{ width: "200px", height: "200px", borderRadius: "50%" }}
-              src={Picture}
+              src={character.picture_link}
             />
             {exalted && <Stats profile={character.exalted} />}
             {!exalted && <Stats profile={character.normal} />}
@@ -62,11 +63,8 @@ function CharCard({ character }) {
           </Col>
           <Col style={{ maxWidth: "10px" }}></Col>
           <Col>
-            <Title
-              name={character.charName}
-              keywords={character.charKeywords}
-            />
-            <Card.Text>
+            <Title name={character.name} keywords={character.keywords} />
+            <div>
               <Row>
                 <BoxDice />
                 <BoxDice />
@@ -89,10 +87,10 @@ function CharCard({ character }) {
                   text={character.gloryRule.text}
                 />
               )}
-            </Card.Text>
+            </div>
           </Col>
         </Row>
-      </Card>
+      </div>
     </Container>
   );
 }
