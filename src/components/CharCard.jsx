@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 
-import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
 import BoxDice from "./BoxDice.jsx";
 import { Attack, AttackBox } from "./Attack.jsx";
 import Title from "./CharTitle.jsx";
 import { Aptitude, UniqueAptitudes } from "./Aptitudes.jsx";
 import Sentier from "./Sentier.jsx";
-import Stats from "./Stats";
+import Stats from "./Stats.jsx";
+import ExaltedPoints from "./ExaltedPoints.jsx";
 
 function CharCard({ character }) {
   const [exalted, setExalted] = useState(false);
@@ -59,7 +58,7 @@ function CharCard({ character }) {
             />
             {exalted && <Stats profile={character.exalted} />}
             {!exalted && <Stats profile={character.normal} />}
-            <Button onClick={() => setExalted(!exalted)}>Exalted</Button>
+            <ExaltedPoints ExaltedToggle={() => setExalted(!exalted)} />
           </Col>
           <Col style={{ maxWidth: "10px" }}></Col>
           <Col>
