@@ -10,6 +10,7 @@ import { Aptitude, UniqueAptitudes } from "./Aptitudes.jsx";
 import Sentier from "./Sentier.jsx";
 import Stats from "./Stats.jsx";
 import ExaltedPoints from "./ExaltedPoints.jsx";
+import Status from "./Status.jsx";
 
 function CharCard({ character }) {
   const [exalted, setExalted] = useState(false);
@@ -18,16 +19,13 @@ function CharCard({ character }) {
     if (exalted) return "#b39b3b";
     return "#232045";
   }
-
-  const normalAptitudes = character.normal.aptitudes.map((aptitude) => (
+  var normalAptitudes;
+  var normalAttacks;
+  if (character.normal) {
+    normalAptitudes = character.normal.aptitudes.map((aptitude) => (
     <Aptitude name={aptitude.name} text={aptitude.text} key={aptitude.name} />
   ));
-
-  const exaltedAptitudes = character.exalted.aptitudes.map((aptitude) => (
-    <Aptitude name={aptitude.name} text={aptitude.text} key={aptitude.name} />
-  ));
-
-  const normalAttacks = character.normal.attacks.map((attack) => (
+    normalAttacks = character.normal.attacks.map((attack) => (
     <Attack
       name={attack.name}
       type={attack.type}
@@ -36,7 +34,18 @@ function CharCard({ character }) {
       key={attack.name}
     />
   ));
-  const exaltedAttacks = character.exalted.attacks.map((attack) => (
+  }
+  else {
+    normalAptitudes = [];
+    normalAttacks = [];
+  }
+  var exaltedAptitudes;
+  var exaltedAttacks;
+  if (character.exalted){
+    exaltedAptitudes = character.exalted.aptitudes.map((aptitude) => (
+    <Aptitude name={aptitude.name} text={aptitude.text} key={aptitude.name} />
+  ));
+    exaltedAttacks = character.exalted.attacks.map((attack) => (
     <Attack
       name={attack.name}
       type={attack.type}
@@ -45,7 +54,11 @@ function CharCard({ character }) {
       key={attack.name}
     />
   ));
-
+  }
+  else {
+    exaltedAptitudes = [];
+    normalAttacks = [];
+  }
   return (
     <Container>
       <div>
@@ -58,6 +71,7 @@ function CharCard({ character }) {
             />
             {exalted && <Stats profile={character.exalted} />}
             {!exalted && <Stats profile={character.normal} />}
+            <Status/>
             <ExaltedPoints ExaltedToggle={() => setExalted(!exalted)} />
           </Col>
           <Col style={{ maxWidth: "10px" }}></Col>
