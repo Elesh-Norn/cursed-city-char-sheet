@@ -6,7 +6,6 @@ import Badge from "react-bootstrap/Badge";
 function BoxDice() {
   const [value, setValue] = useState("");
   const [wound, setWound] = useState(0);
-
   const roll = () => {
     setValue(Math.ceil(Math.random() * 6));
   };
@@ -85,6 +84,13 @@ function BoxDice() {
         >
           Heal
         </Badge>
+        <Badge
+          style={{ cursor: "pointer", color: "white", backgroundColor: "#7e8b4d" }}
+          onClick={() => setValue("S")}
+        >
+          Sick
+        </Badge>
+
       </Col>
     </>
   );
