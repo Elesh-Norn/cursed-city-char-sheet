@@ -1,11 +1,12 @@
 import Table from "react-bootstrap/Table";
+import SpecialDice from "./SpecialDice.jsx";
 
 export function Attack({ name, type, dice, dmg }) {
   return (
     <tr>
       <td>{name}</td>
       <td>{type}</td>
-      <td>{dice}</td>
+      <td><SpecialDice dices={dice}/></td>
       <td>{dmg}</td>
     </tr>
   );

@@ -1,3 +1,4 @@
+import SpecialDice from "./SpecialDice.jsx";
 function Stats({ profile }) {
   return (
     <div
@@ -7,10 +8,10 @@ function Stats({ profile }) {
         backgroundColor: "white",
       }}
     >
-      <div>Mouvement {profile.mouvement}</div>
-      <div>Agilité {profile.agility}</div>
-      <div>Defense {profile.defense}</div>
-      <div>Vitalité {profile.vitality}</div>
+      <div>Mouvement <SpecialDice dices={profile.mouvement}/></div>
+      <div>Agilité <SpecialDice dices={profile.agility}/></div>
+      <div>Defense <SpecialDice dices={profile.defense}/></div>
+      <div>Vitalité <SpecialDice dices={profile.vitality}/></div>
     </div>
   );
 }
