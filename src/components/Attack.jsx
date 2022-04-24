@@ -1,5 +1,6 @@
 import Table from "react-bootstrap/Table";
 import SpecialDice from "./SpecialDice.jsx";
+import React from "react";
 
 export function Attack({ name, type, dice, dmg }) {
   return (

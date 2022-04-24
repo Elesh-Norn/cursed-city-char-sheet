@@ -14,7 +14,6 @@ import Status from "./Status.jsx";
 
 function CharCard({ character }) {
   const [exalted, setExalted] = useState(false);
-
   function Cardcolor() {
     if (exalted) return "#b39b3b";
     return "#232045";

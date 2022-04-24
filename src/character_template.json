@@ -1,69 +1,85 @@
 {
-  "name": "",
-  "keywords": "",
-  "normal_profile": {
-    "mouvement": "",
-    "agility": "",
-    "defense": "",
-    "vityality": "",
+  "name": "Scildan, the Fortress",
+  "keywords": "Protector, Armored, Traveler",
+  "normal": {
+    "mouvement": "3/4",
+    "agility": "□",
+    "defense": "⬟",
+    "vitality": "□",
     "attacks": [
       {
-        "name": "",
-        "type": "",
-        "dice": "",
-        "dmg": ""
+        "name": "Shield Bash (3+)",
+        "type": "Melee",
+        "dice": "▲",
+        "dmg": "1/2"
       },
       {
-        "name": "",
-        "type": "",
-        "dice": "",
-        "dmg": ""
+        "name": "Ion Shot (4+)",
+        "type": "Shot",
+        "dice": "▲",
+        "dmg": "1/2"
       }
     ],
     "aptitudes": [
       {
-        "name": "",
-        "text": ""
+        "name": "Ionize",
+        "text": "Everytime a weapon action from Ion Shot deals critical damage, add a power token to Scildan."
       },
       {
-        "name": "",
-        "text": ""
+        "name": "Discharge",
+        "text": "Everytime a weapon action from Shield Bash deals damage, add +1 damage per power token on Scildan. Remove all power tokens from Scildan."
+      },
+      {
+        "name": "Force Push",
+        "text": "Everytime a weapon action from Shield Bash deals critical damage, move the ennemy figure one space back from Scildan. If this is not possible for any reaons, the ennemy figure takes 1 damage instead."
+      },
+      {
+        "name": "Thunder Charge (6+)",
+        "text": "Once per turn, advance up to 3 squares in a straight line to come adjacent to an ennemy. Perform immediatly a free Shield Bash action. Regardless of the outcome, you can apply Force Push even if you missed your Shield Bash (2+)."
       }
     ]
   },
-  "exalted_profile": {
-    "mouvement": "",
-    "agility": "",
-    "defense": "",
-    "vityality": "",
+  "exalted": {
+    "mouvement": "3/4",
+    "agility": "□",
+    "defense": "⬟",
+    "vitality": "▲",
     "attacks": [
       {
-        "name": "",
-        "type": "",
-        "dice": "",
-        "dmg": ""
+        "name": "Shield Bash (2+)",
+        "type": "Melee",
+        "dice": "⬟",
+        "dmg": "2/2"
       },
       {
-        "name": "",
-        "type": "",
-        "dice": "",
-        "dmg": ""
+        "name": "Ion Shot (2+)",
+        "type": "Shot",
+        "dice": "▲",
+        "dmg": "2/3"
       }
     ],
     "aptitudes": [
       {
-        "name": "",
-        "text": ""
+        "name": "Ionize",
+        "text": "Everytime a weapon action from Ion Shot deals critical damage, add a power token to Scildan."
       },
       {
-        "name": "",
-        "text": ""
+        "name": "Discharge",
+        "text": "Everytime a weapon action from Shield Bash deals damage, add +1 damage per power token on Scildan. Remove all power tokens from Scildan."
+      },
+      {
+        "name": "Force Push",
+        "text": "Everytime a weapon action from Shield Bash deals critical damage, move the ennemy figure one space back from Scildan. If this is not possible for any reaons, the ennemy figure takes 1 damage instead."
+      },
+      {
+        "name": "Thunder Charge (6+)",
+        "text": "Once per turn, advance up to 3 squares in a straight line to come adjacent to an ennemy. Perform immediatly a free Shield Bash action. Regardless of the outcome, you can apply Force Push even if you missed your Shield Bash (2+)."
       }
     ]
   },
   "gloryRule": {
-    "name": "",
-    "text": ""
+    "name": "Pummel them!",
+    "text": "Everytime you manage to inflict damage from Force Push, gain one exaltation point."
   },
-  "picture_link": ""
+  "picture_link": "https://i.imgur.com/kvzh34R.png"
 }

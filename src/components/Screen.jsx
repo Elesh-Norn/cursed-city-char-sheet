@@ -3,7 +3,6 @@ import React, { useState, useRef } from "react";
 import HeaderBar from "./navbar.jsx";
 import CharCard from "./CharCard.jsx";
 import char_template from "../character_template.json";
-import qulathis from "./qulathis.json";
 
 function SaveasJson(file) {
   const element = document.createElement("a");
@@ -20,7 +19,7 @@ function SaveasJson(file) {
 function Screen() {
   const [show, setShow] = useState("Char");
   const charFile = useRef(null);
-  const [character, setCharacter] = useState(qulathis);
+  const [character, setCharacter] = useState(char_template);
 
   function getPage() {
     if (show === "Char") return <CharCard character={character} />;

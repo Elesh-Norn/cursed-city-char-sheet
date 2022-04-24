@@ -1,5 +1,6 @@
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import React from "react";
 
 function Sentier({ name, text }) {
   return (

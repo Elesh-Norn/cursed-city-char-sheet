@@ -1,4 +1,6 @@
+import React from "react";
 import SpecialDice from "./SpecialDice.jsx";
+
 function Stats({ profile }) {
   return (
     <div
