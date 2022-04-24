@@ -9,7 +9,7 @@ This React app is a side project born during COVID lockdown. I was playing Curse
 - You can gain exaltation point and spend them to become exalted.
 
 <div style="text-align:center">
-  <img src="https://github.com/Elesh-Norn/cursed-city-char-sheet/raw/main/examplepicture.png"/>
+  <img src="https://github.com/Elesh-Norn/cursed-city-char-sheet/raw/main/example_picture.png"/>
 </div>
 
 Everything related to character progression and items have not been coded because I've stopped playing by then.
